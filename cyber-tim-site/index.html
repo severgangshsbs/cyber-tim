@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CYBER TIM — компьютерный клуб 24/7</title>
+<meta name="description" content="CYBER TIM — компьютерный клуб 24/7 в Краснодаре. Играйте час, пакетами или всю ночь.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--bg:#030508;--panel:#080c12;--cyan:#00eaff;--violet:#8b5cf6;--pink:#ff2d68;--text:#f4f8ff;--muted:#8793a5;--line:rgba(0,234,255,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:99;pointer-events:none;opacity:.12;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.035) 4px)}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 10%,rgba(0,234,255,.08),transparent 25%),radial-gradient(circle at 85% 35%,rgba(139,92,246,.10),transparent 30%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto;position:relative;z-index:2}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;position:absolute;top:0;left:0;right:0;z-index:5;width:min(1180px,92%);margin:auto}
+.logo{font:800 20px Orbitron;letter-spacing:.16em}.logo i{color:var(--cyan);font-style:normal;text-shadow:0 0 15px var(--cyan)}
+.navlinks{display:flex;gap:28px;font-size:13px;color:#aab4c2}.navlinks a:hover{color:var(--cyan)}
+.hero{min-height:820px;height:100vh;max-height:980px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,234,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(0,234,255,.055) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(90deg,#000,transparent 78%);opacity:.6}
+.hero-beam{position:absolute;width:720px;height:720px;right:-150px;top:80px;border:1px solid rgba(0,234,255,.22);transform:rotate(14deg);box-shadow:0 0 100px rgba(0,234,255,.08),inset 0 0 90px rgba(139,92,246,.08)}
+.hero-beam:before,.hero-beam:after{content:"";position:absolute;inset:55px;border:1px solid rgba(139,92,246,.2);box-shadow:0 0 50px rgba(139,92,246,.10)}.hero-beam:after{inset:110px;border-color:rgba(255,45,104,.18)}
+.hero-content{max-width:780px}.eyebrow{font:600 12px Orbitron;letter-spacing:.32em;color:var(--cyan);margin-bottom:24px;text-shadow:0 0 15px rgba(0,234,255,.6)}
+h1{font:900 clamp(60px,10vw,145px)/.82 Orbitron;letter-spacing:-.08em;margin:0 0 28px;text-transform:uppercase}
+h1 span{color:var(--cyan);text-shadow:0 0 25px rgba(0,234,255,.5)}.hero p{max-width:610px;color:#aeb9c8;font-size:18px;line-height:1.65;margin:0 0 36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}.btn{padding:16px 23px;border:1px solid var(--cyan);font:700 12px Orbitron;letter-spacing:.12em;text-transform:uppercase;transition:.25s;background:rgba(0,234,255,.06);box-shadow:0 0 22px rgba(0,234,255,.12)}.btn:hover{transform:translateY(-3px);box-shadow:0 0 35px rgba(0,234,255,.3)}.btn.alt{border-color:#384152;color:#c7d0dc;background:rgba(255,255,255,.02);box-shadow:none}
+.status{margin-top:54px;display:flex;gap:28px;flex-wrap:wrap}.status div{border-left:2px solid var(--cyan);padding-left:13px}.status b{display:block;font:700 19px Orbitron}.status small{color:#697586;font-size:11px}
+section{padding:110px 0;position:relative}.section-kicker{font:600 11px Orbitron;color:var(--pink);letter-spacing:.25em;margin-bottom:12px}.section-title{font:800 clamp(34px,5vw,65px)/1 Orbitron;letter-spacing:-.05em;margin:0 0 42px}.section-title span{color:var(--cyan)}
+.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.price{padding:28px 24px;min-height:245px;position:relative;background:linear-gradient(145deg,#090e15,#05070b);border:1px solid var(--line);overflow:hidden;transition:.25s}.price:before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));box-shadow:0 0 18px var(--cyan)}.price:hover{transform:translateY(-7px);border-color:rgba(0,234,255,.55);box-shadow:0 0 30px rgba(0,234,255,.10)}.price-num{font:800 44px Orbitron;color:var(--cyan);text-shadow:0 0 20px rgba(0,234,255,.28)}.price h3{font:700 15px Orbitron;margin:20px 0 8px;letter-spacing:.05em}.price p{color:var(--muted);font-size:13px;line-height:1.5}.tag{position:absolute;right:15px;top:18px;font:600 9px Orbitron;color:#7d8b9c;letter-spacing:.1em}
+.cyber{background:#05080d;border-top:1px solid rgba(0,234,255,.10);border-bottom:1px solid rgba(0,234,255,.10)}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.feature{padding:34px;border:1px solid rgba(139,92,246,.18);background:linear-gradient(145deg,rgba(139,92,246,.08),rgba(0,234,255,.025));min-height:190px;position:relative}.feature:after{content:"//";position:absolute;right:20px;bottom:15px;font:900 45px Orbitron;color:rgba(0,234,255,.07)}.icon{font:700 12px Orbitron;color:var(--cyan);letter-spacing:.2em}.feature h3{font:700 21px Orbitron;margin:18px 0 10px}.feature p{color:var(--muted);font-size:14px;line-height:1.6}
+.neon-panel{padding:55px;border:1px solid rgba(0,234,255,.25);background:linear-gradient(120deg,rgba(0,234,255,.05),rgba(139,92,246,.06));box-shadow:0 0 60px rgba(0,234,255,.06),inset 0 0 60px rgba(139,92,246,.04);position:relative;overflow:hidden}.neon-panel h2{font:800 clamp(35px,5vw,68px) Orbitron;max-width:760px;margin:0;letter-spacing:-.05em}.neon-panel h2 span{color:var(--cyan);text-shadow:0 0 20px rgba(0,234,255,.45)}.neon-panel p{max-width:600px;color:var(--muted);line-height:1.7}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.loc{padding:30px;border:1px solid var(--line);background:#080b10}.loc label{display:block;color:#687486;font:600 10px Orbitron;letter-spacing:.18em;margin-bottom:12px}.loc strong{font-size:18px}.loc a{color:var(--cyan)}
+footer{padding:35px 0;border-top:1px solid rgba(255,255,255,.07);color:#667180;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px}
+.reveal{animation:rise .8s both}.delay{animation-delay:.15s}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:850px){.navlinks{display:none}.hero{min-height:760px}.hero-beam{right:-330px;opacity:.65}.prices{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.location-grid{grid-template-columns:1fr}.footer-row{flex-direction:column}.hero p{font-size:16px}}
+@media(max-width:520px){section{padding:75px 0}.prices{grid-template-columns:1fr}.price{min-height:205px}.neon-panel{padding:30px 22px}.hero{min-height:720px}.status{gap:18px}h1{font-size:58px}.btn{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+<header class="hero">
+<nav><a class="logo" href="#">CYBER <i>TIM</i></a><div class="navlinks"><a href="#prices">ЦЕНЫ</a><a href="#club">КЛУБ</a><a href="#location">АДРЕС</a></div></nav>
+<div class="hero-grid"></div><div class="hero-beam"></div>
+<div class="wrap"><div class="hero-content reveal">
+<div class="eyebrow">Krasnodar / Severomorskaya 1/7 / 24:7</div>
+<h1>CYBER<br><span>TIM</span></h1>
+<p>Место, где играют до победы. Неоновый компьютерный клуб с режимом 24/7, пакетами на несколько часов и ночным форматом.</p>
+<div class="cta"><a class="btn" href="#prices">СМОТРЕТЬ ЦЕНЫ</a><a class="btn alt" href="https://yandex.ru/maps/org/cyber_tim/102707252788" target="_blank">МЫ НА КАРТЕ</a></div>
+<div class="status"><div><b>24/7</b><small>РАБОТАЕМ КРУГЛОСУТОЧНО</small></div><div><b>110 ₽</b><small>СТАРТ ОТ 1 ЧАСА</small></div><div><b>18+</b><small>НОЧНОЙ ПАКЕТ</small></div></div>
+</div></div></header>
+
+<section id="prices"><div class="wrap"><div class="section-kicker">01 / PRICING</div><h2 class="section-title">ТВОЙ <span>ТАРИФ</span></h2>
+<div class="prices">
+<div class="price"><span class="tag">DROP 01</span><div class="price-num">110 ₽</div><h3>1 ЧАС ИГРЫ</h3><p>Быстрый заход в игру. Оптимально, если есть свободный час.</p></div>
+<div class="price"><span class="tag">DROP 02</span><div class="price-num">300 ₽</div><h3>ПАКЕТ 3 ЧАСА</h3><p>Три часа игрового времени одним пакетом.</p></div>
+<div class="price"><span class="tag">DROP 03</span><div class="price-num">470 ₽</div><h3>ПАКЕТ 5 ЧАСОВ</h3><p>Пять часов для длинной игровой сессии.</p></div>
+<div class="price"><span class="tag">DROP 04 / 18+</span><div class="price-num">550 ₽</div><h3>НОЧНОЙ ПАКЕТ</h3><p>С 22:00 до 08:00. Ночной режим для тех, кто играет до утра.</p></div>
+</div></div></section>
+
+<section id="club" class="cyber"><div class="wrap"><div class="section-kicker">02 / SYSTEM</div><h2 class="section-title">ВХОДИ В <span>СИСТЕМУ</span></h2>
+<div class="features">
+<div class="feature"><div class="icon">01 / PLAY</div><h3>ИГРАЙ</h3><p>Компьютерный клуб создан именно под игровые сессии — один час, несколько часов или ночь.</p></div>
+<div class="feature"><div class="icon">02 / SQUAD</div><h3>СОБИРАЙ КОМАНДУ</h3><p>Формат для соло-игроков и совместных каток. Приходи играть вместе.</p></div>
+<div class="feature"><div class="icon">03 / NIGHT</div><h3>24/7</h3><p>Клуб работает круглосуточно. Ночной тариф действует с 22:00 до 08:00.</p></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="neon-panel"><div class="section-kicker">03 / EXPERIENCE</div><h2>НЕ ПРОСТО<br><span>КОМПЬЮТЕР.</span><br>ТВОЯ ИГРА.</h2><p>Тёмный интерфейс, неоновый свет, жёсткая типографика и атмосфера киберспорта — сайт теперь говорит на языке компьютерного клуба, а не обычного бизнеса.</p></div></div></section>
+
+<section id="location"><div class="wrap"><div class="section-kicker">04 / LOCATION</div><h2 class="section-title">НАЙДИ <span>CYBER TIM</span></h2>
+<div class="location-grid"><div class="loc"><label>АДРЕС</label><strong>Краснодар, Североморская ул., 1/7</strong></div><div class="loc"><label>РЕЖИМ</label><strong>Круглосуточно · 24/7</strong></div><div class="loc"><label>КАРТА</label><a href="https://yandex.ru/maps/org/cyber_tim/102707252788" target="_blank">Открыть в Яндекс Картах →</a></div><div class="loc"><label>ТЕЛЕГРАМ</label><strong>Бронирование через карточку клуба</strong></div></div></div></section>
+
+<footer><div class="wrap footer-row"><span>CYBER TIM / COMPUTER CLUB</span><span>KRASNODAR · 24/7</span></div></footer>
+</body></html>
